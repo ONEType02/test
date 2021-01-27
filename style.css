@@ -1,0 +1,412 @@
+html, body {
+    width: 100vw;
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100vw;
+    height: 100%;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    background: url('content/forest.png') no-repeat;
+    background-size: cover;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    width: 55%;
+    height: 12%;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    /* border: 1px solid red; 0.8em */
+    font-family: 'Bebas Neue', cursive;
+}
+
+nav a,
+nav span {
+    display: inline-block;
+    margin: 0 auto;
+    letter-spacing: -1px;
+}
+
+nav span {
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid #c7af8a;
+}
+
+.hamb {
+    display: none;
+}
+
+.path {
+    position: absolute;
+    width: 45%;
+    height: 100%;
+    background: url('content/horse.png') no-repeat;
+    background-size: 200% 110%; /*200% 110%*/
+    z-index: 1;
+}
+
+/* .path img {
+    height: 100vh;
+} */
+
+.info {
+    position: absolute;
+    right: 0;
+    top: 12%;
+    width: 55%;
+    /* border: 1px solid blue; */
+}
+
+.info .text {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 80%;
+}
+
+.text img {
+    display: block;
+    width: 100%;
+}
+
+.text::before {
+    content: 'Отель-заповедник';
+    top: -3%;
+    left: 10%;
+    font-size: 1.2vw;
+    letter-spacing: -1px;
+}
+
+.text::after {
+    content: 'Премиальный отдых в Подмосковье';
+    width: 100vw;
+    left: 20%;
+    bottom: -7%;
+    font-size: 1.8vw;
+    letter-spacing: -1.5px;
+}
+
+.text::before,
+.text::after {
+    position: absolute;
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.info .ex {
+    margin-left: 15%;
+    margin-top: 5vw;
+}
+
+.ex .delim {
+    float: left;
+    height: 15vw;
+    margin-top: -6%;
+}
+
+.ex .price {
+    position: relative;
+    display: inline;
+    color: #c7af8a;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3vw;
+    padding: 10px;
+}
+
+.price::before {
+    content: 'от';
+    top: 0;
+    left: 8%;
+}
+
+.price::after {
+    content: 'в сутки';
+    right: 5%;
+    bottom: 0;
+
+}
+
+.price::before,
+.price::after {
+    position: absolute;
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 0.3em;
+}
+
+.ex .desc {
+    width: 45%;
+    height: 60%;
+    margin-top: 20px;
+    font-size: 1.1vw;
+}
+
+.booking {
+    position: absolute;
+    width: 100%;
+    bottom: 6%;
+    height: 5.5%;
+    padding: 5px;
+    background-color: #d3c1a2;
+}
+
+.booking .hb {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    margin-left: 12%;
+}
+
+
+.booking .hb * {
+    height: 100%;
+    margin: 0 5px;
+    border-radius: 2px;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    z-index: 1;
+}
+
+.booking span {
+    display: flex;
+    align-items: center;
+    font-size: 1.5vw;
+    text-transform: uppercase;
+    letter-spacing: -1.5px;
+}
+
+.bd {
+    position: absolute;
+    left: 10%;
+    top: 100%;
+    width: 100vw;
+    z-index: 0 !important;
+}
+
+.bd + .bd {
+    top: -100%;
+}
+
+.booking button {
+    background-color: orange;
+    box-shadow: 0 3px 5px gray;
+    font-size: 10px;
+    padding: 0 15px;
+    margin-left: 10px !important;
+}
+
+input[type="date"] {
+    position: relative;
+    width: 120px;
+}
+
+input[type="date"]::before {
+    content: 'Заезд';
+    position: absolute;
+    top: 15%;
+    left: 30%;
+    font-size: 10px;
+}
+
+input[type="date"].out::before {
+    content: 'Выезд';
+}
+
+::-webkit-datetime-edit {
+    position: relative;
+    left: 35px;
+    bottom: -5px;
+    font-size: 13px;
+}
+
+::-webkit-calendar-picker-indicator {
+    position: relative;
+    right: 90px;
+    color: transparent;
+    background: url('icons/sprite.png') no-repeat center;
+    background-size: 800%;
+    background-position: 4%;
+}
+
+.help {
+    position: relative;
+    width: 55px;
+    margin-left: 0 !important;
+}
+
+.quan {
+    width: 100%;
+}
+
+.help::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: -22px;
+    width: 100%;
+    height: 100%;
+    background: url('icons/sprite.png') no-repeat;
+    background-size: 280%;
+    background-position: 100%;
+}
+
+.help::after {
+    content: 'Гости';
+    position: absolute;
+    top: 5px;
+    left: 27px;
+    font-size: 10px;
+    text-transform: none;
+}
+
+::-webkit-textfield-decoration-container {
+    float: right;
+    margin-top: 5px;
+}
+
+@media screen and (min-width: 1440px) {
+    nav {
+        font-size: 1vw;
+    }
+
+    .ex .delim {
+        height: 17vw;
+    }
+
+    /* .booking .hb * {
+        font-size: 2vw;
+    } */
+}
+
+
+@media screen and (max-width: 860px) {
+    nav {
+        font-size: 0.7em;
+    }
+
+    .path {
+        position: absolute;
+        width: 100%;
+        background-size: 100%; /*200% 110%*/
+    }
+
+    .booking {
+        top: 65vw;
+        z-index: 1;
+    }
+
+    .booking .hb {
+        margin-left: 0;
+    }
+
+    .bd {
+        left: -5px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    nav {
+        position: absolute;
+        right: 5%;
+        width: 10%;
+        justify-content: flex-end;
+    }
+    nav a,
+    nav span{
+        display: none;
+        /* background-size: cover; */
+    }
+    .hamb {
+        display: block;
+    }
+
+    .info {
+        top: 3%;
+    }
+
+    .ex .price {
+        font-size: 4vw;
+    }
+
+    .ex .desc {
+        width: 60%;
+        font-size: 2vw;
+    }
+
+    .ex .delim {
+        height: 32vw;
+        margin-top: -10%;
+    }
+
+}
+
+
+@media screen and (max-width: 575px) {
+    .path {
+        position: static;
+        width: 100%;
+        background-size: cover;
+    }
+
+    .info {
+        position: static;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .info .text {
+        width: 100%;
+    }
+
+    .text::before {
+        left: 11%;
+        font-size: 2.4vw;
+    }
+
+    .text::after {
+        left: 28%;
+        font-size: 3.3vw;
+    }
+
+    .info .ex {
+        margin-top: 20%;
+    }
+
+    .ex .price {
+        font-size: 4.5vw;
+    }
+
+    .ex .desc {
+        font-size: 3vw;
+        height: 30%;
+    }
+
+    .ex .delim {
+        height: 45vw;
+        margin-top: -10%;
+    }
+
+    .booking {
+        position: static;
+    }
+}
