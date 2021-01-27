@@ -118,7 +118,7 @@ nav span {
 
 .ex .delim {
     float: left;
-    height: 15vw;
+    height: 18vw;
     margin-top: -6%;
 }
 
@@ -156,13 +156,13 @@ nav span {
     width: 45%;
     height: 60%;
     margin-top: 20px;
-    font-size: 1.1vw;
+    font-size: 1.3vw;
 }
 
 .booking {
     position: absolute;
     width: 100%;
-    bottom: 6%;
+    bottom: 5%;
     height: 5.5%;
     padding: 5px;
     background-color: #d3c1a2;
@@ -197,9 +197,9 @@ nav span {
 
 .bd {
     position: absolute;
-    left: 10%;
+    left: 12%;
     top: 100%;
-    width: 100vw;
+    width: 100%;
     z-index: 0 !important;
 }
 
